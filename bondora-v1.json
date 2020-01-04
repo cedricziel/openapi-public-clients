@@ -1888,55 +1888,6 @@
             }
         },
         "/api/v1/loanpart/list": {
-            "get": {
-                "tags": [
-                    "SecondMarket"
-                ],
-                "summary": "Gets LoanPartDetails info by identifiers in a list (up to 1000 items).",
-                "operationId": "SecondMarket_GetList",
-                "consumes": [
-                    "application/json",
-                    "text/json",
-                    "application/xml",
-                    "text/xml",
-                    "application/x-www-form-urlencoded"
-                ],
-                "produces": [
-                    "application/json",
-                    "text/json",
-                    "application/xml",
-                    "text/xml"
-                ],
-                "parameters": [
-                    {
-                        "name": "request",
-                        "in": "body",
-                        "description": "LoanPartDetails identifiers list.\r\n            This endpoint supports both GET and POST methods.\r\n            If using this endpoint with the GET method the request data must be sent with the request body, even though it is a GET request.\r\n            The \"Content-Type\" header must be set so the server knows how to decode the data.",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/LoanPartDetailsRequest"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successfully got LoanPartDetails with specified ID",
-                        "schema": {
-                            "$ref": "#/definitions/ApiResultLoanPartDetailsList"
-                        }
-                    },
-                    "400": {
-                        "description": "LoanPart ID is not provided"
-                    },
-                    "401": {
-                        "description": "User is not Authorized"
-                    },
-                    "404": {
-                        "description": "LoanPart with the provided ID was not found"
-                    }
-                },
-                "deprecated": false
-            },
             "post": {
                 "tags": [
                     "SecondMarket"
@@ -2273,55 +2224,6 @@
             }
         },
         "/api/v1/secondarymarket/list": {
-            "get": {
-                "tags": [
-                    "SecondMarket"
-                ],
-                "summary": "Get the secondary market item summaries in a list",
-                "operationId": "SecondMarket_GetItemList",
-                "consumes": [
-                    "application/json",
-                    "text/json",
-                    "application/xml",
-                    "text/xml",
-                    "application/x-www-form-urlencoded"
-                ],
-                "produces": [
-                    "application/json",
-                    "text/json",
-                    "application/xml",
-                    "text/xml"
-                ],
-                "parameters": [
-                    {
-                        "name": "request",
-                        "in": "body",
-                        "description": "SecondaryMarket item identificators.\r\n            This endpoint supports both GET and POST methods.\r\n            If using this endpoint with the GET method the request data must be sent with the request body, even though it is a GET request.\r\n            The \"Content-Type\" header must be set so the server knows how to decode the data.",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/SecondMarketListingRequest"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Successfully fetched the SecondaryMarket item",
-                        "schema": {
-                            "$ref": "#/definitions/ApiResultSecondMarketItemSummaryList"
-                        }
-                    },
-                    "400": {
-                        "description": "No ids specified"
-                    },
-                    "401": {
-                        "description": "User is not Authorized"
-                    },
-                    "404": {
-                        "description": "SecondaryMarket item with specified ID is not found"
-                    }
-                },
-                "deprecated": false
-            },
             "post": {
                 "tags": [
                     "SecondMarket"
